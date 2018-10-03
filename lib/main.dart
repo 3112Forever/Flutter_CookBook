@@ -1,58 +1,16 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(DrawerDemo());
+void main() => runApp(ImageNetwork());
 
-class DrawerDemo extends StatelessWidget {
+class ImageNetwork extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var title = "Network Image";
     return MaterialApp(
-      title: 'Drawer Demo',
-      theme: ThemeData(
-        primaryColor: Colors.redAccent,
-      ),
-      home: DrawerPageDemo(),
-    );
-  }
-}
-
-class DrawerPageDemo extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Drawer Demo')
-      ),
-      body: Center(
-        child: Text('My Page'),
-      ),
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            DrawerHeader(
-              child: Text('Drawer Header'),
-              decoration: BoxDecoration(
-                color: Colors.deepOrangeAccent,
-              ),
-            ),
-
-
-            ListTile(
-              title: Text('Tile 1'),
-              onTap: (){
-                Navigator.pop(context);
-              },
-            ),
-
-            ListTile(
-              title: Text('Tile 2'),
-              onTap: (){
-                Navigator.pop(context);
-              },
-            )
-
-          ],
-        ),
+      title: title,
+      home: Scaffold(
+        appBar: AppBar(title: Text(title),),
+        body: Image.network('https://www.cbe.ie/wp-content/uploads/2018/02/thank-you.jpg',height: 250.0,width: 550.0,),
       ),
     );
   }
