@@ -48,35 +48,7 @@ class HorizontalPage extends StatelessWidget {
               ),
             ],
           ),
-          child: ListView(
-            scrollDirection: Axis.vertical,
-            children: <Widget>[
-              Container(
-                height: 160.0,
-                color: Colors.red,
-              ),
-              Container(
-                height: 160.0,
-                color: Colors.green,
-              ),
-              Container(
-                height: 160.0,
-                color: Colors.blue,
-              ),
-              Container(
-                height: 160.0,
-                color: Colors.red,
-              ),
-              Container(
-                height: 160.0,
-                color: Colors.green,
-              ),
-              Container(
-                height: 160.0,
-                color: Colors.blue,
-              ),
-            ],
-          ),
+
         ),
       ),
     );
